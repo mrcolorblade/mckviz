@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projektek\\C#\\KvizJatek\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\kvizjatek.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:kvizjatek.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\eredmeny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:eredmeny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\kerdes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:kerdes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|d:\\projektek\\c#\\kvizjatek\\adatbaziskezelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41041688-3EFD-4562-968D-52D1AA1B13B8}|KvizJatek.csproj|solutionrelative:adatbaziskezelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdatbazisKezelo.cs",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\AdatbazisKezelo.cs",
+              "RelativeDocumentMoniker": "AdatbazisKezelo.cs",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\AdatbazisKezelo.cs",
+              "RelativeToolTip": "AdatbazisKezelo.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAmwGIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T17:40:26.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Kerdes.cs",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\Kerdes.cs",
+              "RelativeDocumentMoniker": "Kerdes.cs",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\Kerdes.cs",
+              "RelativeToolTip": "Kerdes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T17:39:04.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAAAEABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T17:37:23.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Eredmeny.cs",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\Eredmeny.cs",
+              "RelativeDocumentMoniker": "Eredmeny.cs",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\Eredmeny.cs",
+              "RelativeToolTip": "Eredmeny.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T17:45:59.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KvizJatek",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\KvizJatek.csproj",
+              "RelativeDocumentMoniker": "KvizJatek.csproj",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\KvizJatek.csproj",
+              "RelativeToolTip": "KvizJatek.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-23T17:58:04.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Projektek\\C#\\KvizJatek\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Projektek\\C#\\KvizJatek\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-23T17:37:27.423Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

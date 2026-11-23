@@ -1,0 +1,168 @@
+﻿<Window x:Class="KvizJatek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MC ISTI - Kvíz" Height="650" Width="950"
+        Icon="icon.ico"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <TabControl>
+            <!-- game -->
+            <TabItem Header="Játék">
+                <Grid Margin="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="210"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Felső sáv -->
+                    <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,0,15">
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                            <TextBlock Text="Játékos neve:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold"/>
+                            <TextBox x:Name="txtJatekosNev" Width="180" Padding="5,3" VerticalContentAlignment="Center"/>
+                            <Button Content="Új játék / Újrakezdés" Margin="12,0,0,0" Padding="12,5" Click="BtnUjJatek_Click" FontWeight="SemiBold"/>
+                            <Button x:Name="btnZene" Content="Zene: BE" Margin="8,0,0,0" Padding="10,5" Click="BtnZene_Click"/>
+                        </StackPanel>
+
+                        <TextBlock x:Name="txtPontszam" DockPanel.Dock="Right" Text="Kérdés: 1/1 | Helyes: 0"
+                                   FontSize="16" FontWeight="Bold" Foreground="#2B579A" VerticalAlignment="Center"/>
+                    </DockPanel>
+
+                    <!-- Kozepso resz - kerdesek + kep -->
+                    <Grid Grid.Row="1" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="320"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- kerdesek resz -->
+                        <Border Grid.Column="0" Background="#F4F6F9" BorderBrush="#D0D7DE" BorderThickness="1" CornerRadius="8" Padding="20" Margin="0,0,12,0">
+                            <TextBlock x:Name="txtKerdes"
+                                       Text="Kérdés betöltése..."
+                                       FontSize="22"
+                                       FontWeight="SemiBold"
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- kepek istirol -->
+                        <Border Grid.Column="1" Background="#F4F6F9" BorderBrush="#D0D7DE" BorderThickness="1" CornerRadius="8" Padding="10">
+                            <Grid>
+                                <TextBlock x:Name="txtNincsKep"
+                                           Text="Nincs kép ehhez a kérdéshez"
+                                           Foreground="#6E7781"
+                                           FontStyle="Italic"
+                                           TextWrapping="Wrap"
+                                           TextAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+
+                                <Image x:Name="imgKerdes"
+                                       Stretch="Uniform"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Visibility="Collapsed"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!-- valaszlehetosegek :) -->
+                    <UniformGrid Grid.Row="2" Rows="2" Columns="2">
+                        <Button x:Name="btnA" Tag="A" Content="A:" Margin="6" FontSize="16" Click="ValaszGomb_Click"/>
+                        <Button x:Name="btnB" Tag="B" Content="B:" Margin="6" FontSize="16" Click="ValaszGomb_Click"/>
+                        <Button x:Name="btnC" Tag="C" Content="C:" Margin="6" FontSize="16" Click="ValaszGomb_Click"/>
+                        <Button x:Name="btnD" Tag="D" Content="D:" Margin="6" FontSize="16" Click="ValaszGomb_Click"/>
+                    </UniformGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- 2. adatbazis kezelese -->
+            <TabItem Header="Kérdések kezelése">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.2*"/>
+                        <ColumnDefinition Width="1.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Bal oldal: Táblázat -->
+                    <DataGrid x:Name="dgKerdesek" Grid.Column="0" Margin="0,0,10,0"
+                              AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single"
+                              SelectionChanged="DgKerdesek_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40"/>
+                            <DataGridTextColumn Header="Kérdés" Binding="{Binding KerdesSzoveg}" Width="*"/>
+                            <DataGridTextColumn Header="A" Binding="{Binding ValaszA}" Width="70"/>
+                            <DataGridTextColumn Header="B" Binding="{Binding ValaszB}" Width="70"/>
+                            <DataGridTextColumn Header="C" Binding="{Binding ValaszC}" Width="70"/>
+                            <DataGridTextColumn Header="D" Binding="{Binding ValaszD}" Width="70"/>
+                            <DataGridTextColumn Header="Helyes" Binding="{Binding HelyesValasz}" Width="50"/>
+                            <DataGridTextColumn Header="Kép" Binding="{Binding KepNev}" Width="85"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Jobb oldal: Szerkesztő űrlap -->
+                    <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                        <TextBlock Text="Kérdés adatai" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+
+                        <TextBlock Text="Kérdés szövege:"/>
+                        <TextBox x:Name="txtKerdesSzoveg" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,2,0,6" Padding="4"/>
+
+                        <TextBlock Text="A válasz:"/>
+                        <TextBox x:Name="txtValaszA" Margin="0,2,0,5" Padding="4"/>
+
+                        <TextBlock Text="B válasz:"/>
+                        <TextBox x:Name="txtValaszB" Margin="0,2,0,5" Padding="4"/>
+
+                        <TextBlock Text="C válasz:"/>
+                        <TextBox x:Name="txtValaszC" Margin="0,2,0,5" Padding="4"/>
+
+                        <TextBlock Text="D válasz:"/>
+                        <TextBox x:Name="txtValaszD" Margin="0,2,0,5" Padding="4"/>
+
+                        <TextBlock Text="Helyes válasz betűjele:"/>
+                        <ComboBox x:Name="cmbHelyesValasz" Margin="0,2,0,6" Padding="4" SelectedIndex="0">
+                            <ComboBoxItem Content="A"/>
+                            <ComboBoxItem Content="B"/>
+                            <ComboBoxItem Content="C"/>
+                            <ComboBoxItem Content="D"/>
+                        </ComboBox>
+
+                        <TextBlock Text="Kép fájlneve (opcionális, pl. mcisti.jpg):"/>
+                        <TextBox x:Name="txtKepNev" Margin="0,2,0,12" Padding="4"/>
+
+                        <UniformGrid Rows="2" Columns="2">
+                            <Button Content="Hozzáadás (Új)" Margin="3" Padding="6" Click="BtnHozzaadas_Click" Background="#DFF6DD"/>
+                            <Button Content="Módosítás" Margin="3" Padding="6" Click="BtnModositas_Click" Background="#FFF4CE"/>
+                            <Button Content="Törlés" Margin="3" Padding="6" Click="BtnTorles_Click" Background="#FDE7E9"/>
+                            <Button Content="Mezők ürítése" Margin="3" Padding="6" Click="BtnMezokUritese_Click"/>
+                        </UniformGrid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!--  EREDMÉNYEK  -->
+            <TabItem Header="Eredmények">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DataGrid x:Name="dgEredmenyek" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                            <DataGridTextColumn Header="Játékos neve" Binding="{Binding JatekosNev}" Width="*"/>
+                            <DataGridTextColumn Header="Helyes válaszok száma" Binding="{Binding HelyesValaszokSzama}" Width="180"/>
+                            <DataGridTextColumn Header="Dátum" Binding="{Binding Datum, StringFormat='yyyy.MM.dd HH:mm:ss'}" Width="180"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Grid.Row="1" Content="Kijelölt eredmény törlése" HorizontalAlignment="Right"
+                            Margin="0,10,0,0" Padding="12,6" Click="BtnEredmenyTorles_Click" Background="#FDE7E9"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
